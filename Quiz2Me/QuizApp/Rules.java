@@ -42,9 +42,10 @@ class Rules extends JFrame implements ActionListener {
         setLayout(null);
         
         // image for rules
-        ImageIcon ruleImage = new ImageIcon(ClassLoader.getSystemResource("imgs/login.jpeg"));
+        ImageIcon ruleImage = new ImageIcon(ClassLoader.getSystemResource("imgs/login.jpg"));
         JLabel image = new JLabel(ruleImage);
-        image.setBounds(700, 60, 800, 550);
+        image.setBounds(700, 100, 900,1100); // Utilise getHeight() pour obtenir la hauteur de la fenêtre
+
         add(image);
         image.setVisible(true);
     

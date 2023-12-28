@@ -29,9 +29,9 @@
          getContentPane().setBackground(Color.WHITE);
          setLayout(null);
 
-         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/mapp.jpg"));
+         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/science.jpg"));
          JLabel image = new JLabel(i1);
-         image.setBounds(300, 0, 1440, 780);
+         image.setBounds(470, 0, 1440, 780);
          add(image);
 
          qno = new JLabel("1");
@@ -157,8 +157,8 @@
          lifeline = new JButton("50,50 Lifeline");
          lifeline.setBounds(70, 450, 180, 40);
          lifeline.setFont(new Font("Tohama", Font.PLAIN, 22));
-         lifeline.setBackground(new Color(30, 144, 255));
-         lifeline.setForeground(Color.yellow);
+         lifeline.setBackground(Color.ORANGE);
+         lifeline.setForeground(Color.ORANGE);
          lifeline.addActionListener(this);
          add(lifeline);
 
@@ -260,7 +260,7 @@
              g.setFont(new Font("Tohama", Font.BOLD, 25));
 
              if (timer > 0) {
-                 g.drawString(time, 280, 600);
+                 g.drawString(time, 250, 600);
              } else {
                  g.drawString("Times up!!",280, 600);
              }

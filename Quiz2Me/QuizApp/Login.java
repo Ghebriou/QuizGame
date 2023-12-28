@@ -35,14 +35,14 @@ public class Login extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/test.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/login.jpg"));
         JLabel image = new JLabel(i1);
-        image.setBounds(0, 0,600, 480);
+        image.setBounds(0, 0,920, 790);
         add(image);
         image.setVisible(true);   
 
         JLabel heading=new JLabel("Quiz Game");
-        heading.setBounds(950, 170, 400, 75);
+        heading.setBounds(960, 170, 400, 75);
         heading.setFont(new Font("Comic Sans MS", Font.BOLD, 70));
         heading.setForeground(new Color(30, 144, 254));
         add(heading);

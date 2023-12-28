@@ -33,8 +33,9 @@
 
          ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/math.jpg"));
          JLabel image = new JLabel(i1);
-         image.setBounds(300, 0, 1440, 780);
+         image.setBounds(400, 0, 1440, 780);  // Ajustez la position x (400) selon vos besoins
          add(image);
+
 
          qno = new JLabel("1");
          qno.setBounds(50, 100, 50, 30);
@@ -52,35 +53,35 @@
              // Difficult level questions and answers
     
 
-             questions[0] = new String[]{"If you have 3 toy cars, and each car has 4 wheels, how many wheels do you have in total?","16","12","10","8"};
-             answers[0] = new String[]{"12", "12"};
+             questions[0] = new String[]{"What is the shape of a pizza slice?","Square","Triangle","Circle","Rectangle"};
+             answers[0] = new String[]{"Triangle", "Triangle"};
 
-             questions[1] = new String[]{"If you have 15 candies and want to share them equally among 3 friends, how many candies will each friend get?","6","12","5","4"};
-             answers[1] = new String[]{"5", "5"};
+             questions[1] = new String[]{"What is the name of a shape with five sides?","Circle","Square","Pentagon","Hexagon"};
+             answers[1] = new String[]{"Pentagon", "Pentagon"};
 
-             questions[2] = new String[]{"If you have 7 apples and your friend gives you 3 more, how many apples do you have?","9","2","10","11"};
-             answers[2] = new String[]{"10", "10"};
+             questions[2] = new String[]{"What do you call a shape with eight sides?","Octagon","Pentagon","Hexagon","Square"};
+             answers[2] = new String[]{"Octagon", "Octagon"};
 
-             questions[3] = new String[]{"You have 9 candies. If you give 3 candies to your sister, how many candies do you have left?","6","8","3","10"};
-             answers[3] = new String[]{"6", "6"};
+             questions[3] = new String[]{"How many sides does a triangle have?","6","8","3","10"};
+             answers[3] = new String[]{"3", "3"};
 
-             questions[4] = new String[]{"You have 18 candies, and you want to share them equally among 3 friends. How many candies will each friend get?","15","6","8","4"};
-             answers[4] = new String[]{"6", "6"};
+             questions[4] = new String[]{"Which shape has no corners?","Rectangle","Triangle","Square","Circle"};
+             answers[4] = new String[]{"Circle", "Circle"};
 
-             questions[5] = new String[]{"If you have 5 fingers on one hand and 4 fingers on the other hand, how many fingers do you have in total?","10","8","9","11"};
-             answers[5] = new String[]{"9", "9"};
+             questions[5] = new String[]{"What is the double of 9?","10","18","9","11"};
+             answers[5] = new String[]{"18", "18"};
              
-             questions[6] = new String[]{"If you have 4 boxes, and each box contains 5 crayons, how many crayons do you have in total?", "20", "15", "16", "18"};
-             answers[6] = new String[]{"20", "20"};
+             questions[6] = new String[]{"What the result of 9 - (4+2)?", "2", "5", "3", "8"};
+             answers[6] = new String[]{"3", "3"};
 
-             questions[7] = new String[]{"If you have 7 toy cars and lose 3 of them, how many toy cars do you have left?", "5", "4", "1", "2"};
+             questions[7] = new String[]{"How many sides does a square have?", "5", "4", "1", "2"};
              answers[7] = new String[]{"4", "4"};
 
-             questions[8] = new String[]{"If you have 4 bags, and each bag has 6 apples, how many apples do you have in total?", "24", "26", "28", "25"};
-             answers[8] = new String[]{"24", "24"};
+             questions[8] = new String[]{"What is the name of a shape with four sides?", "Circle", "Triangle", "Square", "Rectangle"};
+             answers[8] = new String[]{"Square", "Square"};
 
-             questions[9] = new String[]{"If you have 8 balloons and your friend gives you 3 more, how many balloons do you have?", "12", "10", "11", "13"};
-             answers[9] = new String[]{"11", "11"};
+             questions[9] = new String[]{"What is the sum in degrees of the angles in a triangle?", "90", "120", "180", "360"};
+             answers[9] = new String[]{"180", "180"};
 
 
          } else {
@@ -151,16 +152,16 @@
          next = new JButton("Next");
          next.setBounds(280, 450, 180, 40);
          next.setFont(new Font("Tohama", Font.PLAIN, 22));
-         next.setBackground(Color.yellow);
-         next.setForeground(Color.black);
+         next.setBackground(Color.BLUE);
+         next.setForeground(Color.BLUE);
          next.addActionListener(this);
          add(next);
 
          lifeline = new JButton("50,50 Lifeline");
          lifeline.setBounds(70, 450, 180, 40);
          lifeline.setFont(new Font("Tohama", Font.PLAIN, 22));
-         lifeline.setBackground(new Color(30, 144, 255));
-         lifeline.setForeground(Color.yellow);
+         lifeline.setBackground(Color.ORANGE);
+         lifeline.setForeground(Color.ORANGE);
          lifeline.addActionListener(this);
          add(lifeline);
 
@@ -258,9 +259,9 @@
              g.setFont(new Font("Tohama", Font.BOLD, 25));
 
              if (timer > 0) {
-                 g.drawString(time, 280, 600);
+                 g.drawString(time, 250, 600);
              } else {
-                 g.drawString("Times up!!",280, 600);
+                 g.drawString("Times up!!",250, 600);
              }
 
              if (isDifficult) {
@@ -323,29 +324,44 @@
              }
          }
      }
-
+     
      public void start(int count) {
-         opt1.setEnabled(true);
-         opt2.setEnabled(true);
-         opt3.setEnabled(true);
-         opt4.setEnabled(true);
+        opt1.setEnabled(true);
+        opt2.setEnabled(true);
+        opt3.setEnabled(true);
+        opt4.setEnabled(true);
 
-         qno.setText("" + (count + 1) + ". ");
-         question.setText(questions[count][0]);
-         opt1.setText(questions[count][1]);
-         opt1.setActionCommand(questions[count][1]);
+        qno.setText("" + (count + 1) + ". ");
+        question.setText(questions[count][0]);
+        opt1.setText(questions[count][1]);
+        opt1.setActionCommand(questions[count][1]);
 
-         opt2.setText(questions[count][2]);
-         opt2.setActionCommand(questions[count][2]);
+        opt2.setText(questions[count][2]);
+        opt2.setActionCommand(questions[count][2]);
 
-         opt3.setText(questions[count][3]);
-         opt3.setActionCommand(questions[count][3]);
+        opt3.setText(questions[count][3]);
+        opt3.setActionCommand(questions[count][3]);
 
-         opt4.setText(questions[count][4]);
-         opt4.setActionCommand(questions[count][4]);
+        opt4.setText(questions[count][4]);
+        opt4.setActionCommand(questions[count][4]);
 
-         groupoptions.clearSelection();
-     }
+        groupoptions.clearSelection();
+    }
+    
+    }
+    
+    
+    
+    
+     
+    
+    
+    
+    
+       
+    
+    
+    
+    
 
-   
- }
+ 

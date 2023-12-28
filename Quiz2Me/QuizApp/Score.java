@@ -36,11 +36,11 @@ public class Score extends JFrame implements ActionListener {
         
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/score3.jpg"));
         JLabel image = new JLabel(i1);
-        image.setBounds(210, 90, 800, 400);
+        image.setBounds(380, 90, 800, 400);
         add(image);
 
         JLabel heading = new JLabel("Thank you " + name + " for playing Quiz Game !");
-        heading.setBounds(560, 30, 750, 40);
+        heading.setBounds(540, 30, 750, 40);
         heading.setFont(new Font("Comic Sans MS", Font.BOLD, 29));
         add(heading);
 
@@ -51,8 +51,8 @@ public class Score extends JFrame implements ActionListener {
             add(lblScore);
             
         } else {
-            JLabel lblScore = new JLabel("OOP! "+ name +" You are fell, try again" );
-            lblScore.setBounds(610, 550, 700, 30);
+            JLabel lblScore = new JLabel("OOPS! "+ name +" , try again" );
+            lblScore.setBounds(660, 550, 700, 30);
             lblScore.setFont(new Font("Tahoma", Font.PLAIN, 26));
             add(lblScore);
         }
