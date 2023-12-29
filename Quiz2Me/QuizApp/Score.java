@@ -46,7 +46,7 @@ public class Score extends JFrame implements ActionListener {
 
         if (score>=50) {
             JLabel lblScore = new JLabel("Congratulations! "+ name +" You have passed the test ");
-            lblScore.setBounds(660, 550, 700, 30);
+            lblScore.setBounds(540, 550, 700, 30);
             lblScore.setFont(new Font("Tahoma", Font.PLAIN, 26));
             add(lblScore);
             

@@ -49,7 +49,7 @@ public class Login2 extends JFrame implements ActionListener {
 
         ImageIcon i3 = new ImageIcon(ClassLoader.getSystemResource("imgs/login.jpg"));
         JLabel image3 = new JLabel(i3);
-        image3.setBounds(0, 0,800, 780);
+        image3.setBounds(0, 0,700, 780);
         add(image3);
         
         
@@ -97,7 +97,7 @@ public class Login2 extends JFrame implements ActionListener {
     private JButton createStyledButton(String text) {
         JButton button = new RoundButton(text);
         button.setBackground(new Color(52, 152, 219));
-        button.setForeground(Color.WHITE);
+        button.setForeground(Color.BLACK);
         button.setFont(new Font("Arial", Font.BOLD, 16));
         button.addActionListener(this);
         return button;

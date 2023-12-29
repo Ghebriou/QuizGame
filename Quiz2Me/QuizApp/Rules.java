@@ -44,7 +44,7 @@ class Rules extends JFrame implements ActionListener {
         // image for rules
         ImageIcon ruleImage = new ImageIcon(ClassLoader.getSystemResource("imgs/login.jpg"));
         JLabel image = new JLabel(ruleImage);
-        image.setBounds(700, 100, 900,1100); // Utilise getHeight() pour obtenir la hauteur de la fenêtre
+        image.setBounds(680, 0, 1150, 780);
 
         add(image);
         image.setVisible(true);
@@ -75,7 +75,7 @@ class Rules extends JFrame implements ActionListener {
        back = new RoundButton("Back");
        back.setBounds(320, 700, 140, 40);
        back.setBackground(new Color(30, 144, 254));
-       back.setForeground(Color.WHITE);
+       back.setForeground(Color.BLACK);
        back.setBackground(Color.RED);  
        back.addActionListener(this);
        add(back);
@@ -83,7 +83,7 @@ class Rules extends JFrame implements ActionListener {
        start = new RoundButton("Start");
        start.setBounds(140, 700, 140, 40);
        start.setBackground(new Color(30, 144, 254));
-       start.setForeground(Color.WHITE);
+       start.setForeground(Color.BLACK);
        start.setBackground(new Color(30, 144, 254)); 
        start.addActionListener(this);
        add(start);

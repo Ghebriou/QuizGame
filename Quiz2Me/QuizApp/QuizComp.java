@@ -86,10 +86,10 @@
              questions[0] = new String[]{"What is the capital of France?", "Paris", "Berlin", "Madrid", "Rome"};
              answers[0] = new String[]{"Paris", "Paris"};
 
-             questions[1] = new String[]{"What is the capital of Spain?", "Madrid", "Barcelona", "Lisbon", "Amsterdam"};
+             questions[1] = new String[]{"What is the capital of Spain?", "Barcelona", "Madrid", "Lisbon", "Amsterdam"};
              answers[1] = new String[]{"Madrid", "Madrid"};
 
-             questions[2] = new String[]{"What is the capital of Italy?", "Rome", "Milan", "Venice", "Florence"};
+             questions[2] = new String[]{"What is the capital of Italy?", "Venice", "Milan", "Rome", "Florence"};
              answers[2] = new String[]{"Rome", "Rome"};
 
              questions[3] = new String[]{"What is the capital of Germany?", "Munich", "Berlin", "Hamburg", "Frankfurt"};
@@ -101,13 +101,13 @@
              questions[5] = new String[]{"What is the capital of Canada?", "Ottawa", "Toronto", "Montreal", "Vancouver"};
              answers[5] = new String[]{"Ottawa", "Ottawa"};
 
-             questions[6] = new String[]{"What is the capital of Japan?", "Tokyo", "Osaka", "Seoul", "Beijing"};
+             questions[6] = new String[]{"What is the capital of Japan?", "Seoul", "Osaka", "Tokyo", "Beijing"};
              answers[6] = new String[]{"Tokyo", "Tokyo"};
 
-             questions[7] = new String[]{"What is the capital of Brazil?", "Brasília", "Rio de Janeiro", "São Paulo", "Buenos Aires"};
+             questions[7] = new String[]{"What is the capital of Brazil?", "Buenos Aires", "Rio de Janeiro", "São Paulo", "Brasília"};
              answers[7] = new String[]{"Brasília", "Brasília"};
 
-             questions[8] = new String[]{"What is the capital of India?", "New Delhi", "Mumbai", "Kolkata", "Chennai"};
+             questions[8] = new String[]{"What is the capital of India?", "Mumbai", "New Delhi", "Kolkata", "Chennai"};
              answers[8] = new String[]{"New Delhi", "New Delhi"};
 
              questions[9] = new String[]{"What is the capital of Algeria?", "Annaba", "Constantine", "Algiers", "Oran"};
@@ -163,8 +163,8 @@
          submit = new JButton("Submit");
          submit.setBounds(490, 450, 180, 40);
          submit.setFont(new Font("Tohama", Font.PLAIN, 22));
-         submit.setBackground(Color.cyan);
-         submit.setForeground(Color.green);
+         submit.setBackground(Color.PINK);
+         submit.setForeground(Color.PINK);
          submit.addActionListener(this);
          submit.setEnabled(false);
          add(submit);

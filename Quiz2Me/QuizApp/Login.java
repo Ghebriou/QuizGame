@@ -37,7 +37,7 @@ public class Login extends JFrame implements ActionListener {
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/login.jpg"));
         JLabel image = new JLabel(i1);
-        image.setBounds(0, 0,920, 790);
+        image.setBounds(0, 0,750, 790);
         add(image);
         image.setVisible(true);   
 
@@ -73,13 +73,13 @@ public class Login extends JFrame implements ActionListener {
         Start.setBounds(1000, 450, 140, 40);
         Start.addActionListener(this);
         Start.setBackground(new Color(30, 144, 254));
-        Start.setForeground(Color.white);
+        Start.setForeground(Color.BLACK);
         add(Start);
 
         Exit = new RoundButton("Exit");
         Exit.setBounds(1160, 450, 140, 40);
         Exit.setBackground(Color.RED);
-        Exit.setForeground(Color.white);
+        Exit.setForeground(Color.BLACK);
         Exit.addActionListener(this);
         add(Exit);
 

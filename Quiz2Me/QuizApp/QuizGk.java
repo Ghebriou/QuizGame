@@ -31,7 +31,7 @@
 
          ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/science.jpg"));
          JLabel image = new JLabel(i1);
-         image.setBounds(470, 0, 1440, 780);
+         image.setBounds(420, 0, 1440, 780);
          add(image);
 
          qno = new JLabel("1");
@@ -53,8 +53,8 @@
              questions[0] = new String[]{"What is the purpose of the heart in the human body?", "Pump blood", "Digest food", "Exchange oxygen and carbon dioxide", "Filter blood"};
              answers[0] = new String[]{"Pump blood", "Pump blood"};
 
-             questions[1] = new String[]{"What is the process by which solid ice turns directly into water ?", "Evaporation", "Melting", "Sublimation", "Condensation"};
-             answers[1] = new String[]{"Melting", "Melting"};
+             questions[1] = new String[]{"Which sense helps us taste different flavors?", "Hearing", "Touch", "Smell", "Taste"};
+             answers[1] = new String[]{"Taste", "Taste"};
 
              questions[2] = new String[]{"Which gas is essential for photosynthesis in plants?", "Hydrogen", "Carbon Dioxide", "Nitrogen", "Oxygen"};
              answers[2] = new String[]{"Oxygen", "Oxygen"};
@@ -71,8 +71,8 @@
              questions[6] = new String[]{"Which of these is an example of a liquid?", "Ice", "Juce", "Air", "Wood"};
              answers[6] = new String[]{"Juce", "Juce"};
 
-             questions[7] = new String[]{"Which gas makes up the majority of Earth's atmosphere?", "Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"};
-             answers[7] = new String[]{"Nitrogen", "Nitrogen"};
+             questions[7] = new String[]{"What gives our body its shape and helps us move?" , "Skin", "Muscles and bones", "Blood", "Organs"} ;
+             answers[7] = new String[]{"Muscles and bones", "Muscles and bones"};
 
              questions[8] = new String[]{"What is the unit of measurement for time?", "Meters", "Seconds", "Kilograms", "Liters"};
              answers[8] = new String[]{"Seconds", "Seconds"};

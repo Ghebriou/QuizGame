@@ -120,25 +120,25 @@
          }
 
          opt1 = new JRadioButton();
-         opt1.setBounds(180, 180, 300, 30);
+         opt1.setBounds(120, 180, 300, 30);
          opt1.setBackground(Color.WHITE);
          opt1.setFont(new Font("Dialog", Font.PLAIN, 20));
          add(opt1);
 
          opt2 = new JRadioButton();
-         opt2.setBounds(180, 220, 300, 30);
+         opt2.setBounds(120, 220, 300, 30);
          opt2.setBackground(Color.WHITE);
          opt2.setFont(new Font("Dialog", Font.PLAIN, 20));
          add(opt2);
 
          opt3 = new JRadioButton();
-         opt3.setBounds(180, 260, 300, 30);
+         opt3.setBounds(120, 260, 300, 30);
          opt3.setBackground(Color.WHITE);
          opt3.setFont(new Font("Dialog", Font.PLAIN, 20));
          add(opt3);
 
          opt4 = new JRadioButton();
-         opt4.setBounds(180, 300, 300, 30);
+         opt4.setBounds(120, 300, 300, 30);
          opt4.setBackground(Color.WHITE);
          opt4.setFont(new Font("Dialog", Font.PLAIN, 20));
          add(opt4);
