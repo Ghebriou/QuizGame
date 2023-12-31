@@ -35,29 +35,23 @@ public class Login extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/login.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/photo1.jpg"));
         JLabel image = new JLabel(i1);
-        image.setBounds(0, 0,750, 790);
+        image.setBounds(260, 50,650, 300);
         add(image);
         image.setVisible(true);   
 
-        JLabel heading=new JLabel("Quiz Game");
-        heading.setBounds(960, 170, 400, 75);
-        heading.setFont(new Font("Comic Sans MS", Font.BOLD, 70));
-        heading.setForeground(new Color(30, 144, 254));
-        add(heading);
-
         JLabel name=new JLabel("Enter Your Name");
-        name.setBounds(1000, 340, 300, 30);
-        name.setFont(new Font("Arial", Font.PLAIN, 18));
+        name.setBounds(500, 350, 300, 30);
+        name.setFont(new Font("Arial", Font.PLAIN, 20));
         name.setForeground(new Color(30, 144, 254));
         add(name);
 
         tfName = new JTextField();
-        tfName.setBounds(1000, 380, 300, 40);
+        tfName.setBounds(420, 400, 300, 40);
         tfName.setFont(new Font("Arial", Font.PLAIN, 16));
-        tfName.setBorder(BorderFactory.createLineBorder(new Color(30, 144, 254)));
-        tfName.setForeground(new Color(30, 144, 254));
+        tfName.setBorder(BorderFactory.createLineBorder(new Color(2, 180, 254)));
+        tfName.setForeground(new Color(2, 180, 254));
         tfName.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
@@ -70,16 +64,16 @@ public class Login extends JFrame implements ActionListener {
         add(tfName);
 
         Start = new RoundButton("Start");
-        Start.setBounds(1000, 450, 140, 40);
+        Start.setBounds(580, 490, 160, 40);
         Start.addActionListener(this);
-        Start.setBackground(new Color(30, 144, 254));
-        Start.setForeground(Color.BLACK);
+        Start.setBackground(new Color(2, 180, 254));
+        Start.setForeground(Color.white);
         add(Start);
 
         Exit = new RoundButton("Exit");
-        Exit.setBounds(1160, 450, 140, 40);
+        Exit.setBounds(400, 490, 160, 40);
         Exit.setBackground(Color.RED);
-        Exit.setForeground(Color.BLACK);
+        Exit.setForeground(Color.white);
         Exit.addActionListener(this);
         add(Exit);
 
@@ -87,7 +81,8 @@ public class Login extends JFrame implements ActionListener {
            
         setTitle("Quiz Game");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setSize(1200, 650);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
   

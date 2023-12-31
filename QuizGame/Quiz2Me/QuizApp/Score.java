@@ -34,35 +34,39 @@ public class Score extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
         
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/score3.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/results.png"));
         JLabel image = new JLabel(i1);
-        image.setBounds(380, 90, 800, 400);
+        image.setBounds(150, 70, 900, 300);
         add(image);
 
-        JLabel heading = new JLabel("Thank you " + name + " for playing Quiz Game !");
-        heading.setBounds(540, 30, 750, 40);
+        JLabel heading = new JLabel("Thank you " + name + " for playing Quiz Game!");
+        heading.setBounds(300, 30, 700, 40);
         heading.setFont(new Font("Comic Sans MS", Font.BOLD, 29));
+        heading.setForeground(new Color(30, 144, 254));
         add(heading);
 
         if (score>=50) {
-            JLabel lblScore = new JLabel("Congratulations! "+ name +" You have passed the test ");
-            lblScore.setBounds(540, 550, 700, 30);
+            JLabel lblScore = new JLabel("Congratulations "+ name +" Lkhabache! ");
+            lblScore.setBounds(370, 400, 600, 30);
             lblScore.setFont(new Font("Tahoma", Font.PLAIN, 26));
+            lblScore.setForeground(new Color(0, 255, 0));
             add(lblScore);
             
         } else {
-            JLabel lblScore = new JLabel("OOPS! "+ name +" , try again" );
-            lblScore.setBounds(660, 550, 700, 30);
+            JLabel lblScore = new JLabel("OOPS! "+ name +", try again!" );
+            lblScore.setBounds(430, 400, 600, 30);
             lblScore.setFont(new Font("Tahoma", Font.PLAIN, 26));
+            lblScore.setForeground(new Color(255, 0, 0));
             add(lblScore);
         }
-        JLabel lblScore = new JLabel("Your Score is " + score );
-        lblScore.setBounds(680, 600, 300, 30);
+        JLabel lblScore = new JLabel("Your Score is " + score +"/100");
+        lblScore.setBounds(430, 440, 300, 30);
         lblScore.setFont(new Font("Tahoma", Font.PLAIN, 28));
+        lblScore.setForeground(new Color(30, 144, 254));
         add(lblScore);
 
         RoundedButton submit = new RoundedButton("Home");
-        submit.setBounds(690, 650, 170, 40);
+        submit.setBounds(470, 495, 170, 40);
         submit.setFont(new Font("Tahoma", Font.PLAIN, 22));
         submit.setBackground(Color.RED);
         submit.setForeground(Color.white);
@@ -72,7 +76,8 @@ public class Score extends JFrame implements ActionListener {
 
         setTitle("Quiz Game");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setSize(1200, 650);
+        setLocationRelativeTo(null);
         setVisible(true);
 
     }

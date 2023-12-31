@@ -2,8 +2,31 @@
  import javax.swing.*;
  import java.awt.*;
  import java.awt.event.*;
+ class RoundedCornerButton extends JButton {
+	    public RoundedCornerButton(String text) {
+	        super(text);
+	        setContentAreaFilled(false);
+	    }
 
- public class QuizGk extends JFrame implements ActionListener {
+	    @Override
+	    protected void paintComponent(Graphics g) {
+	        if (getModel().isArmed()) {
+	            g.setColor(Color.lightGray);
+	        } else {
+	            g.setColor(getBackground());
+	        }
+	        g.fillRoundRect(0, 0, getWidth() - 1, getHeight() - 1, 15, 15);
+	        super.paintComponent(g);
+	    }
+
+	    @Override
+	    protected void paintBorder(Graphics g) {
+	        g.setColor(getForeground());
+	        g.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, 15, 15);
+	    }
+	}
+ 
+ public class QuizScience extends JFrame implements ActionListener {
 	 String questions[][] = new String[20][5];  // Increase the array size
      String answers[][] = new String[20][2];    // Increase the array size
      String useranswers[][] = new String[20][1];  // Increase the array s
@@ -11,9 +34,9 @@
      JLabel qno, question;
      JRadioButton opt1, opt2, opt3, opt4;
      ButtonGroup groupoptions;
-     JButton next, lifeline, submit;
+     RoundedCornerButton next, lifeline, submit;
 
-     public static int timer = 20;
+     public static int timer = 15;
      public static int ans_given = 0;
      public static int count = 0;
      public static int score = 0;
@@ -21,7 +44,7 @@
      String name;// Store user's name
      private boolean isDifficult;
 
-     QuizGk(String name, boolean isDifficult) {
+     QuizScience(String name, boolean isDifficult) {
          this.name = name;
          this.isDifficult = isDifficult;
 
@@ -29,21 +52,21 @@
          getContentPane().setBackground(Color.WHITE);
          setLayout(null);
 
-         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/science.jpg"));
+         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("imgs/sciences.png"));
          JLabel image = new JLabel(i1);
-         image.setBounds(420, 0, 1440, 780);
+         image.setBounds(740,-10, 400,600);
          add(image);
 
          qno = new JLabel("1");
          qno.setBounds(50, 105, 50, 30);
-         qno.setFont(new Font("Tahoma", Font.PLAIN, 27));
-         qno.setForeground(Color.BLUE);
+         qno.setFont(new Font("Tahoma", Font.PLAIN, 24));
+         qno.setForeground(new Color(30, 144, 254));
          add(qno);
 
          question = new JLabel("This is Question no1");
-         question.setBounds(85, 100, 800, 40);
-         question.setForeground(Color.BLUE);
-         question.setFont(new Font("Tahoma", Font.PLAIN, 27));
+         question.setBounds(85, 100, 1000, 40);
+         question.setForeground(new Color(30, 144, 254));
+         question.setFont(new Font("Tahoma", Font.PLAIN, 24));
          add(question);
          // Existing questions and answers...
          if (isDifficult) {
@@ -53,8 +76,8 @@
              questions[0] = new String[]{"What is the purpose of the heart in the human body?", "Pump blood", "Digest food", "Exchange oxygen and carbon dioxide", "Filter blood"};
              answers[0] = new String[]{"Pump blood", "Pump blood"};
 
-             questions[1] = new String[]{"Which sense helps us taste different flavors?", "Hearing", "Touch", "Smell", "Taste"};
-             answers[1] = new String[]{"Taste", "Taste"};
+             questions[1] = new String[]{"What is the process by which solid ice turns directly into water ?", "Evaporation", "Melting", "Sublimation", "Condensation"};
+             answers[1] = new String[]{"Melting", "Melting"};
 
              questions[2] = new String[]{"Which gas is essential for photosynthesis in plants?", "Hydrogen", "Carbon Dioxide", "Nitrogen", "Oxygen"};
              answers[2] = new String[]{"Oxygen", "Oxygen"};
@@ -68,11 +91,11 @@
              questions[5] = new String[]{"How many hearts does an octopus have?", "2", "1", "3", "0"};
              answers[5] = new String[]{"3", "3"};
 
-             questions[6] = new String[]{"Which of these is an example of a liquid?", "Ice", "Juce", "Air", "Wood"};
-             answers[6] = new String[]{"Juce", "Juce"};
+             questions[6] = new String[]{"Which of these is an example of a liquid?", "Ice", "Juice", "Air", "Wood"};
+             answers[6] = new String[]{"Juice", "Juice"};
 
-             questions[7] = new String[]{"What gives our body its shape and helps us move?" , "Skin", "Muscles and bones", "Blood", "Organs"} ;
-             answers[7] = new String[]{"Muscles and bones", "Muscles and bones"};
+             questions[7] = new String[]{"Which gas makes up the majority of Earth's atmosphere?", "Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"};
+             answers[7] = new String[]{"Nitrogen", "Nitrogen"};
 
              questions[8] = new String[]{"What is the unit of measurement for time?", "Meters", "Seconds", "Kilograms", "Liters"};
              answers[8] = new String[]{"Seconds", "Seconds"};
@@ -119,24 +142,28 @@
          opt1 = new JRadioButton();
          opt1.setBounds(120, 180, 300, 30);
          opt1.setBackground(Color.WHITE);
+         opt1.setForeground(new Color(23, 111, 196));
          opt1.setFont(new Font("Dialog", Font.PLAIN, 20));
          add(opt1);
 
          opt2 = new JRadioButton();
          opt2.setBounds(120, 220, 300, 30);
          opt2.setBackground(Color.WHITE);
+         opt2.setForeground(new Color(23, 111, 196));
          opt2.setFont(new Font("Dialog", Font.PLAIN, 20));
          add(opt2);
 
          opt3 = new JRadioButton();
          opt3.setBounds(120, 260, 300, 30);
          opt3.setBackground(Color.WHITE);
+         opt3.setForeground(new Color(23, 111, 196));
          opt3.setFont(new Font("Dialog", Font.PLAIN, 20));
          add(opt3);
 
          opt4 = new JRadioButton();
          opt4.setBounds(120, 300, 300, 30);
          opt4.setBackground(Color.WHITE);
+         opt4.setForeground(new Color(23, 111, 196));
          opt4.setFont(new Font("Dialog", Font.PLAIN, 20));
          add(opt4);
 
@@ -146,37 +173,39 @@
          groupoptions.add(opt3);
          groupoptions.add(opt4);
 
-         next = new JButton("Next");
-         next.setBounds(280, 450, 180, 40);
+         next = new RoundedCornerButton("Next");
+         next.setBounds(280, 400, 180, 40);
          next.setFont(new Font("Tohama", Font.PLAIN, 22));
-         next.setBackground(Color.yellow);
-         next.setForeground(Color.black);
+         next.setBackground(new Color(2, 180, 254));
+         next.setForeground(Color.WHITE);
          next.addActionListener(this);
          add(next);
 
-         lifeline = new JButton("50,50 Lifeline");
-         lifeline.setBounds(70, 450, 180, 40);
+         lifeline = new RoundedCornerButton("50,50 Lifeline");
+         lifeline.setBounds(70, 400, 180, 40);
          lifeline.setFont(new Font("Tohama", Font.PLAIN, 22));
-         lifeline.setBackground(Color.ORANGE);
-         lifeline.setForeground(Color.ORANGE);
+         lifeline.setBackground(Color.WHITE);
+         lifeline.setForeground(new Color(2, 180, 254));
          lifeline.addActionListener(this);
          add(lifeline);
 
-         submit = new JButton("Submit");
-         submit.setBounds(490, 450, 180, 40);
+         submit = new RoundedCornerButton("Submit");
+         submit.setBounds(490, 400, 180, 40);
          submit.setFont(new Font("Tohama", Font.PLAIN, 22));
-         submit.setBackground(Color.cyan);
-         submit.setForeground(Color.green);
+         submit.setBackground(new Color(63, 195, 23));
+         submit.setForeground(Color.WHITE);
          submit.addActionListener(this);
-         submit.setEnabled(false);
+         
          add(submit);
+
 
          start(count);
 
 
          setTitle("Quiz Game");
          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-         setExtendedState(JFrame.MAXIMIZED_BOTH);
+         setSize(1200, 650);
+         setLocationRelativeTo(null);
          setVisible(true);
      }
     
@@ -260,9 +289,9 @@
              g.setFont(new Font("Tohama", Font.BOLD, 25));
 
              if (timer > 0) {
-                 g.drawString(time, 250, 600);
+                 g.drawString(time, 250, 550);
              } else {
-                 g.drawString("Times up!!",280, 600);
+                 g.drawString("Times up!!",280, 550);
              }
 
              if (isDifficult) {

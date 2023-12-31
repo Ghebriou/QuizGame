@@ -47,57 +47,58 @@ public class Login2 extends JFrame implements ActionListener {
         setLayout(null);
         userName = name; 
 
-        ImageIcon i3 = new ImageIcon(ClassLoader.getSystemResource("imgs/login.jpg"));
+        ImageIcon i3 = new ImageIcon(ClassLoader.getSystemResource("imgs/login2.png"));
         JLabel image3 = new JLabel(i3);
-        image3.setBounds(0, 0,700, 780);
+        image3.setBounds(60, 0,400, 600);
         add(image3);
         
         
         JPanel headingPanel = new JPanel();
         headingPanel.setBackground(new Color(255, 255, 255, 128)); 
-        headingPanel.setBounds(1035, 170, 400, 75);
+        headingPanel.setBounds(600, 100, 400, 75);
         add(headingPanel);
 
         JLabel heading = new JLabel("Quiz Game");
         heading.setFont(new Font("Montserrat", Font.BOLD, 48));
-        heading.setForeground(Color.BLUE);
+        heading.setForeground(new Color(30, 144, 254));
  
         headingPanel.setLayout(new BorderLayout());
         headingPanel.add(heading, BorderLayout.CENTER);
 
-        JLabel module = new JLabel("Select any of the Following to attempt Quiz");
-        module.setBounds(925, 300, 500, 30);
+        JLabel module = new JLabel("Select any of the Following to attempt Quiz:");
+        module.setBounds(500, 240, 500, 30);
         module.setFont(new Font("Comic Sans MS", Font.BOLD, 22));
-        module.setForeground(Color.BLACK);
+        module.setForeground(new Color(30, 144, 254));
         add(module);
 
         Sciences = createStyledButton("Sciences");
-        Sciences.setBounds(900, 380, 150, 40);
+        Sciences.setBounds(470, 320, 150, 40);
         add(Sciences);
 
         Maths = createStyledButton("Mathematics");
-        Maths.setBounds(1100, 380, 150, 40);
+        Maths.setBounds(670, 320, 150, 40);
         add(Maths);
 
         Capitals = createStyledButton("Capitals");
-        Capitals.setBounds(1300, 380, 150, 40);
+        Capitals.setBounds(870, 320, 150, 40);
         add(Capitals);
 
         Exit = createStyledButton("Exit");
-        Exit.setBounds(1100, 550, 150, 40);
+        Exit.setBounds(670, 420, 150, 40);
         Exit.setBackground(Color.RED);
         add(Exit);
 
         setTitle("Quiz Game");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setSize(1200, 650);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 
     private JButton createStyledButton(String text) {
         JButton button = new RoundButton(text);
         button.setBackground(new Color(52, 152, 219));
-        button.setForeground(Color.BLACK);
+        button.setForeground(Color.WHITE);
         button.setFont(new Font("Arial", Font.BOLD, 16));
         button.addActionListener(this);
         return button;
@@ -114,7 +115,7 @@ public class Login2 extends JFrame implements ActionListener {
             if (choice == 1) {
                 isDifficult = true;
             }
-            new QuizGk(userName, isDifficult);  
+            new QuizScience(userName, isDifficult);  
             
         } else if (ae.getSource() == Maths) { 
             setVisible(false);
@@ -138,7 +139,7 @@ public class Login2 extends JFrame implements ActionListener {
             if (choice == 1) {
                 isDifficult = true;
             }
-            new QuizComp(userName, isDifficult); 
+            new QuizCapital(userName, isDifficult); 
             
         } else if (ae.getSource() == Exit) {
             setVisible(false);
